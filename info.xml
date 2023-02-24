@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<extension key="smarty" type="module">
+  <file>smarty</file>
+  <name>smarty</name>
+  <description>Upgrades Smarty to v3</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Eileen</author>
+    <email>eileen@civicrm.org</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://lab.civicrm.org/dev/core/-/issues/4146</url>
+    <url desc="Documentation">https://lab.civicrm.org/dev/core/-/issues/4146</url>
+    <url desc="Support">https://lab.civicrm.org/dev/core/-/issues/4146</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2023-01-01</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.60</ver>
+  </compatibility>
+  <comments>This extension replaces Smarty with v3 in combination with fixes in core</comments>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/Smarty</namespace>
+    <format>22.12.1</format>
+    <angularModule>crmSmarty</angularModule>
+  </civix>
+  <mixins>
+    <mixin>setting-php@1.0.0</mixin>
+    <mixin>smarty-v2@1.0.1</mixin>
+  </mixins>
+</extension>
